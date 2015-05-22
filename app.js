@@ -41,7 +41,7 @@ app.get('/delphidata', function (req, res) {
     pg.connect(conString, function(err, client, done) {
       if(err) return console.log(err);
       
-      var query = 'SELECT * FROM cdph_smoking_prevalence_in_adults_1984_2013';
+      var query = "SELECT * FROM arjis_crimes WHERE (zip='91950')";
       client.query(query, function(err, result) {
         // return the client to the connection pool for other requests to reuse
         done();
