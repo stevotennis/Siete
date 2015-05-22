@@ -1,46 +1,3 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-body{
-    width:1060px;
-    margin:50px auto;
-}
-path {  stroke: #fff; }
-path:hover {  opacity:0.9; }
-rect:hover {  fill:blue; }
-.axis {  font: 10px sans-serif; }
-.legend tr{    border-bottom:1px solid grey; }
-.legend tr:first-child{    border-top:1px solid grey; }
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.x.axis path {  display: none; }
-.legend{
-    margin-bottom:76px;
-    display:inline-block;
-    border-collapse: collapse;
-    border-spacing: 0px;
-}
-.legend td{
-    padding:4px 5px;
-    vertical-align:bottom;
-}
-.legendFreq, .legendPerc{
-    align:right;
-    width:50px;
-}
-
-</style>
-<body>
-<div id='dashboard'>
-</div>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
 function dashboard(id, fData){
     var barColor = 'steelblue';
     function segColor(c){ return {low:"#807dba", mid:"#e08214",high:"#41ab5d"}[c]; }
@@ -237,9 +194,7 @@ function dashboard(id, fData){
         pC = pieChart(tF), // create the pie-chart.
         leg= legend(tF);  // create the legend.
 }
-</script>
 
-<script>
 var freqData=[
 {State:'AL',freq:{low:4786, mid:1319, high:249}}
 ,{State:'AZ',freq:{low:1101, mid:412, high:674}}
@@ -254,51 +209,3 @@ var freqData=[
 ];
 
 dashboard('#dashboard',freqData);
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container">
-  <h2>Delphi Data</h2>
-  <p>Regional Crime:</p>            
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Agency</th>
-        <th>Charge Description</th>
-        <th>Address</th>
-        <th>Zip</th>
-        <th>Community</th>
-
-      </tr>
-    </thead>
-    <tbody id="delphi-table">
-    </tbody>
-  </table>
-</div>
