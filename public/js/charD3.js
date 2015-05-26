@@ -1,9 +1,35 @@
+
+console.log("In charD3.js");
+
+
+
+//$(document).ready(function(){
+	//DelphiDemo.init();
+	
+//});
+	//console.log("distinct ARRAY " + distinct);
+/*setInterval(function(){
+	if(typeof distinct == 'undefined') {
+		console.log("undefined");
+	}
+	else {
+		console.log("distinct ARRAY " + DelphiDemo.distinct);
+	}
+}, 1000);*/
+
+
+
 function dashboard(id, fData){
+
+	console.log("fData " + fData);
+	
+	
     var barColor = 'steelblue';
     function segColor(c){ return {low:"#807dba", mid:"#e08214",high:"#41ab5d"}[c]; }
     
     // compute total for each state.
-    fData.forEach(function(d){d.total=d.freq.low+d.freq.mid+d.freq.high;});
+    fData.forEach(function(d){d.total=d.freq.low+d.freq.mid+d.freq.high;}
+    );
     
     // function to handle histogram.
     function histoGram(fD){
@@ -195,6 +221,9 @@ function dashboard(id, fData){
         leg= legend(tF);  // create the legend.
 }
 
+
+console.log("Jon distinct array ");
+
 var freqData=[
 {State:'AL',freq:{low:4786, mid:1319, high:249}}
 ,{State:'AZ',freq:{low:1101, mid:412, high:674}}
@@ -206,6 +235,19 @@ var freqData=[
 ,{State:'IL',freq:{low:4498, mid:3852, high:942}}
 ,{State:'IN',freq:{low:797, mid:1849, high:1534}}
 ,{State:'KS',freq:{low:162, mid:379, high:471}}
+];
+
+var prac92058 = [
+	{State:'Drunk in Public', total:53}
+	,{State:'Simple Battery', total:38}
+	,{State:'Petty Theft', total:37}
+	,{State:'Vandalism', total:33}
+	,{State:'Vandalism', total:32}
+	,{State:'Petty Theft', total:30}
+	,{State:'Burglary Vehicle', total:30}
+	,{State:'Burglary Res', total:30}
+	,{State:'Take Vehicle', total:22}
+	,{State:'Petty Theft', total:21}
 ];
 
 dashboard('#dashboard',freqData);
