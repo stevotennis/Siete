@@ -1,13 +1,43 @@
+<!-- ZIPCODE -->
+
+<form id="custom-zip">
+	<input type="text" placeholder="Enter a Zip Code" class="target" />
+    <input type="submit" value="View Data" />
+</form>
+<span class="message"></span> 
+
+
+<form id="ready">
+    <input type="submit" value="View D3 array" />
+</form>
+
+
+<!-- DASHBOARD -->
+<div id='dashboard'></div>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="js/chard3.js"></script>
+<script src="js/index.js"></script>
+
+
+
+
+<!-- OTHER -->
+
 <div class="container">
   <h2>Delphi Data</h2>
-  <p>Smoking in adults by age from 1984-Present:</p>            
+  <p>Regional Crime:</p>            
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Year</th>
-        <th>Gender</th>
-        <th>Percentage</th>
-        <th>Respondents</th>
+        <th>Agency</th>
+        <th>Charge Description</th>
+        <th>Date</th>
+        <th>Address</th>
+        <th>Zip</th>
+        <th>Community</th>
+
       </tr>
     </thead>
     <tbody id="delphi-table">
