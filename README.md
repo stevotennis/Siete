@@ -14,6 +14,7 @@ VARS:
 	where "zip"='91950'
 	group by "charge_description"
 	order by count(*) desc
+
 	
 - low - 2013
 - med - 2014

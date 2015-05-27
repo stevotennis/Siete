@@ -82,9 +82,42 @@ var DelphiDemo = DelphiDemo || (function() {
     }
   }
 
-  self.getQ = function(){
+  self.getQQ = function(){
     return arr;
   }
+  
+  
+  
+  /*
+  self.getYear2013 = function(){
+    console.log("Getting year 2013");
+    $.get("/year2013", function(data) {
+      //if(!verifyData(data, zip)) return;
+      //console.log("## In getNewData: " + data);
+      var rows = $.map(data, function (item, i) {
+        //arr.push(item.charge_description);
+        tmp.charge = item.charge_description;
+        tmp.freq = 0;
+        //arr.push(item.charge_description);
+        arr.push(tmp);
+        //console.log(arr[0]);
+        //console.log(arr.length);
+        return "<tr><td>" + item.agency + "</td><td>" + item.charge_description + "</td><td>" + item.activity_date + "</td><td>" + item.block_address + "</td><td>" + item.zip + "</td><td>" + item.community + "</td></tr>";
+      }).join("");
+      //$("#delphi-table").append(rows);
+      //console.log(arr);
+      }
+    );
+    return arr;
+  };
+  */
+  
+  
+  
+  
+  
+  
+  
 
   return self;
 })();

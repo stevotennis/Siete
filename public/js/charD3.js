@@ -204,7 +204,8 @@ function dashboard(id, fData){
 console.log("still waiting on callback()");
 
 //for(var i; i < 10000; i++);
-//console.log (d3arr);
+//console.log("BOOM" + d3arr);
+
 
 var freqData=[
     {State:'AL',freq:{low:4786, mid:1319, high:249}}
@@ -233,8 +234,12 @@ $(document).ready(function() {
     //   DelphiDemo.getNewData(value);
     // }
     //console.log(d3arr);
-    d3arr = DelphiDemo.getQ();
+    d3arr = DelphiDemo.getQQ();
     console.log(d3arr);
+    console.log("index0 " + d3arr[0]);
+    console.log("d3arr LENGTH " + d3arr.length);
     evt.preventDefault();
   });
 });
+
+
