@@ -66,7 +66,7 @@ app.get('/delphidata', function (req, res) {
           //args.push(req.query.zipcode);
           console.log("############ " + query);
         }
-        console.log(query);
+        //console.log(query);
         client.query(query, args, function(err, result) {
           if(handleError(err, res)) return;
 
