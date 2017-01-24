@@ -1,5 +1,7 @@
 COGS 121 Final Project - Spring 2015
 ===========
+Deployed App:
+http://siete2.herokuapp.com/
 
 TO DO:
 - Connect user input zipcode to app.js query
